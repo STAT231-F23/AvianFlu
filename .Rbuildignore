@@ -1,0 +1,5 @@
+^.*\.Rproj$
+^\.Rproj\.user$
+analyze.qmd
+analyze.pdf
+INSTRUCTIONS.md

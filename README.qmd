@@ -1,0 +1,30 @@
+---
+title: "XX DATA PACKAGE"
+author: "YOUR NAME"
+date: "2023-10-XX"
+date-format: iso
+format: gfm
+editor: source
+---
+
+```{r}
+#| label: setup
+#| include: false
+library(tidyverse)
+library(DiscGolf)
+```
+
+This file describes the XX package.
+
+It can be installed by running:
+
+```
+devtools::install_github("nicholasjhorton/DiscGolf")
+library(DiscGolf)
+```
+
+```{r}
+glimpse(DiscGolf)
+```
+
+See analysis.pdf for example analyses.

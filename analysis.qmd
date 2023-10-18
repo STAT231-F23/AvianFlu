@@ -1,0 +1,46 @@
+---
+title: "Analysis of the XX dataset"
+author: "XX YOUR NAME HERE XX"
+date: "2023-10-XX"
+date-format: iso
+format: pdf
+editor: source
+---
+
+```{r}
+#| label: setup
+#| include: false
+library(mosaic)   
+library(tidyverse)
+# instructions to install the package
+# devtools::install_github("nicholasjhorton/DiscGolf")
+library(DiscGolf)
+```
+
+This file provides an overview of the XX package as well as some sample analyses.
+
+The `DiscGolf` package contains specifications for discs approved by the Professional Disc Golf Association as of October, 2020.
+This package may be of interest to those who play (or like to watch) ultimate frisbee.
+
+```{r}
+#| label: fig-myfigure
+#| fig.cap: "XX MY CAPTION"
+#| warning: false
+#| fig.width: 6
+#| fig.height: 8
+DiscGolf |>
+  mutate(
+    weight_grp = cut_number(
+      weight, 
+      3,
+      labels = c("<175gm", "175-177gm", "177+gm")
+    )
+  ) |>
+  ggplot(aes(x = approved_date, y = flexibility, color = weight_grp)) +
+  geom_point() +
+  geom_smooth(se = FALSE) +
+  labs(x = "Date of approval", y = "Flexibility (in kg)", color = "Weight group") +
+  theme(legend.position = "top")
+```
+
+We see in @fig-myfigure that XX add interpretation here XX.
