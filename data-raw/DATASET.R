@@ -1,23 +1,18 @@
 # this needs to be updated for your package
 library(tidyverse)
-DiscGolf <-
-  readr::read_csv("pdga-approved-disc-golf-discs_2020-10-04T15-02-04.csv") |>
+Mammals <-
+  readr::read_csv("hpai-mammals.csv") |>
   janitor::clean_names() |>
   mutate(
-    model = iconv(disc_model, "latin1", "ASCII", sub = ""),
-    approved_date = lubridate::mdy(approved_date)
-  ) |>
-  rename(
-    diameter = diameter_cm,
-    flexibility = flexibility_kg,
-    height = height_cm,
-    manufacturer = manufacturer_distributor,
-    rim_depth = rim_depth_cm,
-    rim_thickness = rim_thickness_cm,
-    weight = max_weight_gr
-  ) %>%
-  select(
-    approved_date, class, diameter, flexibility, height,
-    manufacturer, model, rim_depth, rim_thickness, weight
+    date_collected = lubridate::mdy(date_collected),
+    date_detected = lubridate::mdy(date_detected)
   )
-usethis::use_data(DiscGolf)
+usethis::use_data(Mammals)
+
+Wild_Birds <-
+  readr::read_csv("hpai-wild-birds-ver2.csv") |>
+  janitor::clean_names() |>
+  mutate(
+    date_detected = lubridate::mdy(date_detected)
+  )
+usethis::use_data(Wild_Birds)

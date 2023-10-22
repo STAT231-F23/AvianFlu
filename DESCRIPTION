@@ -2,10 +2,10 @@ Package: XX
 Title: XX
 Version: 0.0.1
 Authors@R: 
-    person(given = "XX",
-           family = "XX",
+    person(given = "Casey",
+           family = "Crary",
            role = c("aut", "cre"),
-           email = "XX@amherst.edu")
+           email = "ccrary26@amherst.edu")
 Description: XX Your description goes here.
 License: MIT + file LICENSE
 Encoding: UTF-8
