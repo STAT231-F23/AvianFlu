@@ -1,7 +1,7 @@
 ---
-title: "XX DATA PACKAGE"
+title: "AVIAN FLU DATA PACKAGE"
 author: "Casey Crary"
-date: "2023-10-XX"
+date: "2023-10-22"
 date-format: iso
 format: gfm
 editor: source
@@ -11,10 +11,10 @@ editor: source
 #| label: setup
 #| include: false
 library(tidyverse)
-library(DiscGolf)
+library(AvianFlu)
 ```
 
-This file describes the XX package.
+This file describes the AvianFlu package.
 
 It can be installed by running:
 
@@ -24,7 +24,7 @@ library(DiscGolf)
 ```
 
 ```{r}
-glimpse(DiscGolf)
+glimpse(Mammals)
 ```
 
 See analysis.pdf for example analyses.
