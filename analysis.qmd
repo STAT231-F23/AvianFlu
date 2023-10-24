@@ -22,15 +22,16 @@ This package may be of interest to anyone considered with poultry health.
 
 ```{r}
 #| label: fig-myfigure
-#| fig.cap: "XX MY CAPTION"
+#| fig.cap: "Histogram of HPAI Detections Over Time, Colored by WOAH Classification"
 #| warning: false
 #| fig.width: 6
 #| fig.height: 8
 Wild_Birds |>
   ggplot(aes(x = date_detected, color = woah_classification)) +
   geom_histogram() +
-  labs(x = "Date of detection", y = "Count",
-       color = "WOAH classification")
+  labs(x = "Date of Detection", y = "Count of HPAI detections",
+       color = "WOAH classification",
+       title = "Count of HPAI Detections Over Time, Colored by WOAH Classification")
 ```
 
-We see in @fig-myfigure that XX add interpretation here XX.
+We see in @fig-myfigure that there doesn't appear to be a general trend in HPAI detections, although it does appear that there are spikes at certain points during the year.  This could perhaps be because many birds are detected by hunters, who primarily operate in the late fall, where the spike appears to occur in 2022.  Also, most detections occur in wild birds as opposed to captive ones.

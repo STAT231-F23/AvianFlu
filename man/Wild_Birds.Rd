@@ -3,7 +3,7 @@
 \docType{data}
 \name{Wild_Birds}
 \alias{Wild_Birds}
-\title{Wild Birds}
+\title{Wild Birds Data}
 \format{
 A data frame with 7355 rows and 8 columns:
 \describe{

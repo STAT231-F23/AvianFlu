@@ -1,4 +1,4 @@
-#' Wild Birds
+#' Wild Birds Data
 #'
 #' A dataset made by APHIS containing detections of avian influenza in wild birds
 #'  from 2022 to 2023.
